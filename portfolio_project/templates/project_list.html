@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Projects{% endblock %}
+
+{% block content %}
+    <h1>Projects</h1>
+    <ul>
+        {% for project in projects %}
+            <li>
+                <img src="{{ project.image.url }}" alt="Project Image">
+                <p>{{ project }}</p>  <!-- truncated description -->
+                <p>Posted on {{ project.date_posted }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
+{% endblock %}

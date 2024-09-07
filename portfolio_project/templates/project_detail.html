@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{{ project.title }}</h1>
+    <div id="carousel">
+        {% for image in project.images.all %}
+            <img src="{{ image.url }}" alt="Project Image">
+        {% endfor %}
+    </div>
+    <p>{{ project.description }}</p>
+    <a href="{{ project.website }}" target="_blank">Visit Project Website</a>
+{% endblock %}
